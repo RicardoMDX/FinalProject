@@ -7,12 +7,15 @@ public class Zombie : MonoBehaviour
     public int i_Health, i_Damage;
     public float f_Speed;
     private GameObject go_player;
+
+    GameManager scr_GameManager;
     Rigidbody m_Rigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
         go_player = GameObject.FindGameObjectWithTag("Player");
+        scr_GameManager = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameManager>();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -22,6 +25,8 @@ public class Zombie : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, go_player.transform.position, f_Speed);
         if (i_Health <= 0)
         {
+            scr_GameManager.i_EnemiesAlive--;
+            scr_GameManager.i_Money++;
             Destroy(this.gameObject);
         }
     }

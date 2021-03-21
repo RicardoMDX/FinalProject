@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 3835467521335707299}
   - component: {fileID: 4035830776710842851}
   - component: {fileID: 3762978150122260992}
-  - component: {fileID: 4259216932167418876}
   - component: {fileID: 4035830776710842861}
   - component: {fileID: 2219972365467907112}
   - component: {fileID: 4035830776710842852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -100,7 +99,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
@@ -114,20 +113,6 @@ CapsuleCollider:
   m_GameObject: {fileID: 910042404107755026}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &4259216932167418876
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910042404107755026}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -148,7 +133,7 @@ MonoBehaviour:
   f_Speed: 20
   f_ROF: 1
   f_ShotSpeed: 50
-  i_Health: 10
+  i_Health: 5
   i_Money: 0
   i_Damage: 1
 --- !u!114 &2219972365467907112
@@ -188,7 +173,7 @@ GameObject:
   - component: {fileID: 2943833740316331461}
   - component: {fileID: 5502485270360520874}
   - component: {fileID: 5568547792354229182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4657981105992003652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7083737707587217232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

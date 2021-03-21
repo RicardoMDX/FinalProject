@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
    
     Rigidbody m_Rigidbody;
+    float h, v, moveLimiter=0.7f;
     private PlayerManager playerManager;
 
     // Start is called before the first frame update
@@ -16,15 +17,25 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+    }
+
     void FixedUpdate()
     {
         //Movement
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
 
-        Vector3 tempVector = new Vector3(h, 0, v);
-        tempVector = tempVector.normalized * playerManager.f_Speed * Time.deltaTime;
-        m_Rigidbody.MovePosition(transform.position + tempVector);
+        if (h != 0 && v != 0) // Check for diagonal movement
+        {
+            // limit movement speed diagonally, so you move at 70% speed
+            h *= moveLimiter;
+            v *= moveLimiter;
+        }
+
+        m_Rigidbody.velocity = new Vector3(h * playerManager.f_Speed, 0, v * playerManager.f_Speed);
 
         //Rotation
         Vector3 v3_MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
