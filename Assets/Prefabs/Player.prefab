@@ -134,7 +134,6 @@ MonoBehaviour:
   f_ROF: 1
   f_ShotSpeed: 50
   i_Health: 5
-  i_Money: 0
   i_Damage: 1
 --- !u!114 &2219972365467907112
 MonoBehaviour:

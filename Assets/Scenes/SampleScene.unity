@@ -1466,6 +1466,7 @@ MonoBehaviour:
   i_Wave: 1
   i_Money: 0
   i_Enemies: 3
+  i_EnemiesAlive: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,6 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3ebb34e0c6f9d47a5e0a8db64ffa93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scr_GameManager: {fileID: 963194229}
   go_Zombie: {fileID: 3415521492427106739, guid: 5ff7044eff0e50a498f037a9cc7a580a, type: 3}
   go_EnemySpawns:
   - {fileID: 1919842048}
@@ -1492,8 +1494,6 @@ MonoBehaviour:
   - {fileID: 2078723702}
   - {fileID: 2117030053}
   - {fileID: 1651355447}
-  f_LastSpawn: 0
-  f_Timer: 1
 --- !u!1 &983802141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,10 +2901,6 @@ PrefabInstance:
     - target: {fileID: 910042404107755026, guid: 0a297db6b14fddf4088b020b0a11ec43, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4035830776710842861, guid: 0a297db6b14fddf4088b020b0a11ec43, type: 3}
-      propertyPath: f_ROF
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7759591051478702350, guid: 0a297db6b14fddf4088b020b0a11ec43, type: 3}
       propertyPath: m_RootOrder

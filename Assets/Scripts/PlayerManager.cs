@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -18,7 +19,10 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(i_Health<=0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     void Hit(int i_Hit)
